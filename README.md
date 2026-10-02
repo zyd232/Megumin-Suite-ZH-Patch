@@ -41,6 +41,17 @@
 启用即生效，无需其他配置。卸载 = 在 `扩展程序` 面板中删除该扩展，
 或删除 `SillyTavern/scripts/extensions/third-party/Megumin-Suite-ZH-Patch/` 整个文件夹。
 
+## 上游版本对照
+
+本补丁的词典与中文推理脚本基于以下上游版本构建。上游更新后旧文案会自动
+回落英文（不会报错），对照兼容性时以下表为准：
+
+| 上游插件 | 基于版本 | 上游主页 | 备注 |
+| --- | --- | --- | --- |
+| Megumin Suite（`third-party/Megumin-Suite`） | v10.0 | [Arif-salah/Megumin-Suite](https://github.com/Arif-salah/Megumin-Suite) | 构建于 2026-10-02 |
+
+`manifest.json` 的 `compatibleUpstream` 字段包含同样的标记，可程序化读取。
+
 ## 工作原理（为什么安全）
 
 - **精确匹配**：只对「归一化（trim + 空白折叠）后与词典 key 完全相等」的字符串翻译。
@@ -83,6 +94,7 @@
 
 | 版本 | 变更 |
 | --- | --- |
+| v1.1.1 | 新增上游版本对照标记（基于 Megumin Suite v10.0，见「上游版本对照」与 manifest `compatibleUpstream`） |
 | v1.1.0 | 更名 Megumin-Suite-ZH-Patch；项目分目录重组（src/、tools/、references/） |
 | v1.0.2 | 修复中文语言选择被「保存并关闭」覆盖回英文的问题（对齐上游语言卡片写入路径） |
 | v1.0.1 | 新增 CoT 中文：V7–V10 共 14 条中文推理脚本 + 「Mandarin (中文)」卡片 |

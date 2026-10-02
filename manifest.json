@@ -6,8 +6,14 @@
     "dependencies": [
         "third-party/Megumin-Suite"
     ],
+    "compatibleUpstream": {
+        "third-party/Megumin-Suite": {
+            "version": "10.0",
+            "homePage": "https://github.com/Arif-salah/Megumin-Suite"
+        }
+    },
     "js": "index.js",
     "author": "DSH",
-    "version": "1.1",
+    "version": "1.1.1",
     "homePage": ""
 }

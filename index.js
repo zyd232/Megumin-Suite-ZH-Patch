@@ -26,7 +26,7 @@ import { extension_settings, getContext } from "../../../extensions.js";
 import { saveSettingsDebounced } from "../../../../script.js";
 import { COT_ZH } from "./src/cot-zh.js";
 
-const VERSION = "1.1.0";
+const VERSION = "1.1.1";
 
 // ── CoT 中文：注入上游共享注册表 ────────────────────────────────────────────
 // /scripts/extensions/third-party/Megumin-Suite/data/cot/index.js 导出的
