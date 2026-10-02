@@ -1,0 +1,13 @@
+{
+    "display_name": "Megumin-Suite-ZH-Patch",
+    "loading_order": 110,
+    "requires": [],
+    "optional": [],
+    "dependencies": [
+        "third-party/Megumin-Suite"
+    ],
+    "js": "index.js",
+    "author": "DSH",
+    "version": "1.1",
+    "homePage": ""
+}
