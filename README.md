@@ -1,14 +1,14 @@
 # Megumin-Suite-ZH-Patch
 
-给 SillyTavern 第三方扩展 **Megumin Suite** 做的中文补丁（界面翻译 + 中文推理脚本）。
-以独立扩展的形式存在，**不改动 Megumin-Suite 原目录里的任何文件**，
+给 SillyTavern 第三方扩展 **[Megumin Suite](https://github.com/Arif-salah/Megumin-Suite)** 做的中文补丁（界面翻译 + 中文推理脚本）。
+以独立扩展的形式存在，**不改动 [Megumin-Suite](https://github.com/Arif-salah/Megumin-Suite) 原目录里的任何文件**，
 上游插件更新后补丁照常工作，未收录的新文案自动回落英文（不会报错、不会乱码）。
 
 ## 目录结构
 
 | 路径 | 作用 |
 | --- | --- |
-| `manifest.json` | 扩展清单。`dependencies: ["third-party/Megumin-Suite"]` 保证只在 Megumin Suite 存在时加载；`loading_order: 110` 晚于上游 |
+| `manifest.json` | 扩展清单。`dependencies: ["third-party/Megumin-Suite"]` 保证只在 [Megumin Suite](https://github.com/Arif-salah/Megumin-Suite) 存在时加载；`loading_order: 110` 晚于上游 |
 | `index.js` | 插件入口（manifest `js` 字段指向此处）：翻译引擎 + CoT 中文注入 |
 | `src/dict.js` | 英文 → 中文字典（`TEXT_DICT` 文本节点、`ATTR_DICT` title/aria-label/placeholder） |
 | `src/cot-zh.js` | V7/V8/V9/V10 中文推理脚本（`COT_ZH`，14 条） |
@@ -48,7 +48,7 @@
 
 | 上游插件 | 基于版本 | 上游主页 | 备注 |
 | --- | --- | --- | --- |
-| Megumin Suite（`third-party/Megumin-Suite`） | v10.0 | [Arif-salah/Megumin-Suite](https://github.com/Arif-salah/Megumin-Suite) | 构建于 2026-10-02 |
+| [Megumin Suite](https://github.com/Arif-salah/Megumin-Suite)（`third-party/Megumin-Suite`） | v10.0 | [Arif-salah/Megumin-Suite](https://github.com/Arif-salah/Megumin-Suite) | 构建于 2026-10-02 |
 
 `manifest.json` 的 `compatibleUpstream` 字段包含同样的标记，可程序化读取。
 
